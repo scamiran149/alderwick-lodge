@@ -10,7 +10,8 @@
   <link rel="preload" as="image" href="assets/lakeshore.webp" fetchpriority="high">
   <link rel="preload" as="font" href="assets/fonts/display.woff2" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
-  <script src="lodge.js" defer></script>
+  <link rel="stylesheet" href="chapters.css">
+  <script src="lodge.js?v=2" defer></script>
 </head>
 <body id="top">
   <svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -74,6 +75,22 @@
         </div>
       </div>
     </section>
+    <section class="reception" id="reception" aria-labelledby="desk-title">
+      <div class="reception-inner wrap">
+        <div class="desk-copy">
+          <p class="eyebrow ruled">At the front desk</p>
+          <h2 id="desk-title">A key for <em>the night.</em></h2>
+          <p class="scene-prose">The bell sticks in damp weather. If nobody comes, take a cabin key from the rail. Each one has a little brass tooth worn smooth by someone else’s hand.</p>
+          <div class="key-rail" role="group" aria-label="Cabin keys">
+            <button class="cabin-key fir" data-cabin="Fir" data-room="02" aria-label="Fir cabin key, room 02" aria-pressed="false"><span class="key-number">02</span><span>Fir</span></button>
+            <button class="cabin-key cedar" data-cabin="Cedar" data-room="04" aria-label="Cedar cabin key, room 04" aria-pressed="false"><span class="key-number">04</span><span>Cedar</span></button>
+            <button class="cabin-key larch" data-cabin="Larch" data-room="08" aria-label="Larch cabin key, room 08" aria-pressed="false"><span class="key-number">08</span><span>Larch</span></button>
+          </div>
+          <p id="key-receipt" class="key-receipt" role="status">Three keys on the rail.</p>
+        </div>
+        <figure class="desk-print"><img src="assets/reception.webp" alt="Three cabin keys and a worn brass bell in the late afternoon light" width="1200" height="800" loading="lazy"><figcaption>Reception, just before closing.</figcaption></figure>
+      </div>
+    </section>
     <section class="notes" id="notes" aria-labelledby="notes-title">
       <div class="notes-inner wrap">
         <figure class="field-photo"><img src="assets/trail.webp" loading="lazy" width="1200" height="800" alt="Both arms of the trail disappear into the same bank of fog"><figcaption>West loop, last light.</figcaption></figure>
@@ -81,8 +98,35 @@
           <dl class="entries">
             <div><dt>4:12 PM</dt><dd>Fresh blaze on the hemlock. Keep left at the fork and you’ll be home by supper.</dd></div>
             <div><dt>5:47 PM</dt><dd>A guest took the right fork. She passed me again, coming from the left.</dd></div>
-            <div><dt>5:47 PM</dt><dd>I can see my own porch light through the trees. I’m standing on my porch.</dd></div>
+            <div><dt>5:47 PM<code class="time-tail" aria-hidden="true">&lt;/time&gt;</code></dt><dd>I can see my own porch light through the trees. I’m standing on my porch.</dd></div>
           </dl>
+        </div>
+      </div>
+    </section>
+    <section class="darkroom" id="darkroom" aria-labelledby="darkroom-title">
+      <div class="wrap">
+        <header class="darkroom-heading">
+          <p class="eyebrow ruled">From the darkroom</p>
+          <h2 id="darkroom-title">The second <em>exposure.</em></h2>
+        </header>
+        <div class="exposure-run">
+          <figure class="contact-print">
+            <div class="emulsion">
+              <img src="assets/dock.webp" alt="A red canoe tied to an empty dock" width="1200" height="800" loading="lazy">
+              <img class="developed" src="assets/second-exposure.webp" alt="" width="1200" height="800" loading="lazy">
+            </div>
+            <figcaption><span>East dock &nbsp;/&nbsp; Contact print</span><span id="film-mark" aria-hidden="true">17 A</span></figcaption>
+          </figure>
+          <article class="print-note">
+            <p class="eyebrow">Frame 17 A</p><h3>The first pull.</h3>
+            <p>A guest left a roll of film in the cabin fridge. The last frame is the canoe, tied up exactly where we left it. I made a print for the lost-property book.</p>
+          </article>
+          <figure class="second-print contact-print"><img src="assets/second-exposure.webp" alt="Four pale fingers curl over the gunwale from the lake" width="1200" height="800" loading="lazy"><figcaption>East dock &nbsp;/&nbsp; Second pull</figcaption></figure>
+          <article class="print-note" id="second-pull">
+            <p class="eyebrow">Frame 17 A, again</p><h3>Same negative.</h3>
+            <p>The rope hasn’t moved. Count the fingers on the rim. I turned the photograph over and felt four little dents in the back.</p>
+            <div class="caption-leak"><code>&lt;/figcaption&gt;</code><span>There used to be a border here.</span></div>
+          </article>
         </div>
       </div>
     </section>
@@ -93,8 +137,83 @@
           <p class="register-heading"><span>Alderwick Lodge</span><span class="eyebrow">Night register</span></p>
           <div class="register-row"><span>8:10 PM</span><p>Two knocks on the door. My husband’s voice asked to come in. He was asleep next to me.</p></div>
           <div class="register-row"><span>8:11 PM</span><p>The chain is still on. There are wet footprints on this side.</p></div>
-          <div class="register-row entry-last"><span>8:12 PM</span><p>There you are. I saved the last room for you.</p></div>
-          <span class="register-stamp">ROOM 06</span>
+          <div class="register-row entry-last"><span>8:12 PM</span><p id="register-memory">You left all three keys on the rail. What’s that in your pocket?</p></div>
+          <div class="register-foot"><p id="blotter">Blot before turning.</p><span class="register-stamp">ROOM 06</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="switchboard" id="switchboard" aria-labelledby="line-title">
+      <div class="switchboard-photo">
+        <img src="assets/switchboard.webp" alt="One amber light burning on a telephone switchboard beside an unhooked receiver" width="1600" height="800" loading="lazy">
+        <div class="wrap"><p class="eyebrow ruled">After the desk closes</p><h2 id="line-title">An open <em>line.</em></h2>
+          <p class="scene-prose">The operator pulled the last cord at eight. One socket is still warm. On the desk, the machine that takes messages is feeding out paper.</p>
+        </div>
+      </div>
+      <div class="transcript-wrap wrap" id="line-tape">
+        <div class="line-heading"><p class="eyebrow">Operator’s carbon</p><span>Extension 06</span></div>
+        <div class="line-dialogue">
+          <p><span>Desk</span>There’s nobody on this circuit.</p>
+          <p><span>Room 06</span><q id="line-voice">Then whose hand is moving the paper?</q></p>
+        </div>
+      </div>
+    </section>
+    <section class="carbon-copy" id="carbon-copy" aria-labelledby="copy-title">
+      <div class="copy-stage">
+        <div class="end-rule"><span>Alderwick Lodge &nbsp;·&nbsp; End of visitor brochure</span><code>&lt;/html&gt;</code></div>
+        <div class="copy-mast" aria-hidden="true">
+          <span class="brand"><svg><use href="#mark"/></svg><span>Alderwick<small>LODGE</small></span></span>
+          <span class="overprint">The lodge &nbsp; / &nbsp; The lodge &nbsp; / &nbsp; The lodge</span>
+        </div>
+        <div class="copy-hero">
+          <div class="copy-landscape" aria-hidden="true"><img src="assets/lakeshore.webp" alt="" loading="lazy" width="1774" height="887"><div class="tear tear-high"></div><div class="tear tear-low"></div></div>
+          <div class="copy-ink wrap">
+            <p class="eyebrow">North Cascades, Washington</p>
+            <h2 id="copy-title">A different<br><em id="copy-word">side of the glass.</em></h2>
+            <p id="copy-sentence">At the top of the page, the windows faced the lake. From here they look straight out at you.</p>
+          </div>
+          <code aria-hidden="true" class="stray-tag">&lt;/h1&gt;</code>
+        </div>
+        <p class="copy-colophon"><code>&lt;title&gt;</code><span id="printed-title">Alderwick Lodge · The carbon copy</span><code>&lt;/title&gt;</code></p>
+      </div>
+    </section>
+    <section class="glassworks" id="glass" aria-labelledby="glass-title">
+      <div class="glass-inner wrap">
+        <div class="glass-copy">
+          <p class="eyebrow ruled">Maintenance archive &nbsp;/&nbsp; Room 06</p>
+          <h2 id="glass-title">Cut <em>to fit.</em></h2>
+          <p class="scene-prose">A glazier measured the opening in feet. Someone has rubbed out the figures. In their place are the exact dimensions of the window you’re reading through.</p>
+          <details class="carbon-source">
+            <summary>Lift the tracing paper</summary>
+            <pre><code>&lt;room number="06"&gt;
+  &lt;key&gt;<span id="source-key">still on the rail</span>&lt;/key&gt;
+  &lt;occupant&gt;reader&lt;/occupant&gt;
+&lt;/room&gt;</code></pre>
+            <p class="tracing-note">Mind your fingers. The ink is wet on your side.</p>
+          </details>
+        </div>
+        <figure class="blueprint">
+          <figcaption><span>Glazing sheet</span><span>Opening 06</span></figcaption>
+          <button class="survey" id="glass-pane" aria-label="Knock on the glass">
+            <span class="measured-pane">
+              <span class="measure-x" id="pane-width">Width as found</span><span class="measure-y" id="pane-height">Height as found</span>
+              <span class="pane-hatching" aria-hidden="true"></span><span class="pane-prints" aria-hidden="true"><i></i><i></i></span>
+            </span>
+            <span class="knock-label">Knock on the glass</span>
+          </button>
+          <p id="knock-reply" role="status">Single pane. One side accessible.</p>
+        </figure>
+      </div>
+    </section>
+    <section class="service" id="service" aria-labelledby="service-title">
+      <div class="stair-view"><img src="assets/service-stair.webp" alt="A flight of green service stairs ends at a door with a slit of light beneath it" width="1600" height="800" loading="lazy"></div>
+      <div class="landings wrap">
+        <div class="landing">
+          <div><p class="eyebrow ruled">Behind reception</p><h2 id="service-title">The service <em>stair.</em></h2>
+            <p>There’s just enough light to see where the varnish has worn off the rail. Halfway down, the worn strip moves from the top to the underside. Something climbs this stair upside down.</p></div>
+        </div>
+        <div class="landing">
+          <div><p class="eyebrow ruled">Lower landing</p><h3>The light under <em>the door.</em></h3>
+            <p id="landing-key">There’s a key in the lock already. From the other side, someone takes the weight of your hand as you turn it.</p></div>
         </div>
       </div>
     </section>
@@ -103,7 +222,7 @@
         <img class="hall-img" src="assets/hall.webp" loading="lazy" alt="A distant silhouette in the dark lodge corridor" width="1774" height="887">
         <img class="visitor-img" src="assets/visitor.webp" loading="lazy" alt="A pale face with a black eye peers through the gap in the door, close enough to touch" width="1774" height="887">
         <div class="night-shade"></div>
-        <div class="night-copy wrap"><div class="hall-copy"><p class="eyebrow ruled">Room 06</p><h2>Two knocks.<br><em>Then three.</em></h2><p>You slide the chain across. The knocking stops.</p></div>
+        <div class="night-copy wrap"><div class="hall-copy"><p class="eyebrow ruled">Room 06</p><h2>Two knocks.<br><em>Then three.</em></h2><p id="hall-line">You slide the chain across. The knocking stops.</p></div>
           <div class="visitor-copy"><p class="eyebrow ruled">Room 06 · occupied</p><h2>It’s already<br><em>inside.</em></h2><p>Warm breath against the back of your neck. From the hall, your own voice asks to come in.</p><a class="daylight" href="#top">Back to daylight</a></div>
         </div>
       </div>
@@ -113,7 +232,7 @@
   <dialog id="guide-dialog" aria-labelledby="guide-title">
     <div class="dialog-inner"><button class="close-btn" aria-label="Close visitor guide" data-close><svg aria-hidden="true"><use href="#close"/></svg></button>
       <p class="eyebrow ruled">Alderwick Lodge</p><h2 id="guide-title">Visitor <em>guide.</em></h2>
-      <div class="guide-items"><a href="#lodge"><strong>The lodge</strong><span>Cabins, canoes, and the west loop</span></a><a href="#notes"><strong>Field notes</strong><span>Updates from the ranger’s desk</span></a><a href="#guestbook"><strong>Guestbook</strong><span>The register at reception</span></a></div>
+      <div class="guide-items"><a href="#lodge"><strong>The lodge</strong><span>Cabins, canoes, and the west loop</span></a><a href="#reception"><strong>Reception</strong><span>Pick up a cabin key</span></a><a href="#notes"><strong>Field notes</strong><span>Updates from the ranger’s desk</span></a><a href="#guestbook"><strong>Guestbook</strong><span>The register at reception</span></a></div>
       <details class="experience"><summary>About this experience</summary><p>Alderwick is a fictional lodge in an interactive horror story. Later scenes include unsettling imagery. Sound starts only when you choose it. Scroll back at any time.</p><button id="motion-option" class="text-btn" aria-pressed="false">Use still scenes</button></details>
     </div>
   </dialog>
